@@ -5,7 +5,7 @@
 
 ## 📌 About the Project
 
-This repository documents the 6-week RTL2GDS SoC Implementation program, focusing on System & RTL Foundations to Physical Design and Sign-off using the OpenLANE flow[cite: 705, 706]. [cite_start]The objective is to achieve a clean GDSII layout without human-in-the-loop intervention, demonstrating a complete digital ASIC design lifecycle
+This repository documents the 6-week RTL2GDS SoC Implementation program, focusing on System & RTL Foundations to Physical Design and Sign-off using the OpenLANE flow.The objective is to achieve a clean GDSII layout without human-in-the-loop intervention, demonstrating a complete digital ASIC design lifecycle
 
 ## Content
 - [Week 1](#week-1)
@@ -27,14 +27,27 @@ This repository documents the 6-week RTL2GDS SoC Implementation program, focusin
 ### 1.1 OpenLANE Directory Structure & Design Preparation
 OpenLANE integrates several open-source EDA tools (Yosys, ABC, Magic, Ngspice, OpenSTA) to automate the ASIC flow. The design preparation step initializes the environment, merges LEF files, and creates a timestamped run directory.
 
+**Objective:** Understand the big-picture flow, open-source EDA tools, and execute design preparation and RTL synthesis.
+
+#### The Big Picture: ASIC Design & OpenLANE
+Digital ASIC design requires three elements: RTL IP, EDA Tools, and PDK Data . The Process Design Kit (PDK) acts as the critical interface between the designer and the fabrication facility, containing process rules, device models, and standard cell libraries . OpenLANE is an automated, open-source reference flow that strings together tools like Yosys, ABC, Magic, and OpenROAD to produce a clean GDSII layout with zero human intervention .
+
+#### Laboratory Execution Steps
+
+**1. Environment Initialization:** Open the terminal and navigate to the OpenLANE directory.
 ```bash
 # Invoke OpenLANE via Docker
 cd Desktop/OpenLane
 make mount
-
-# Launch interactive flow and prepare the picorv32a design
+```
+**2. Launch Interactive Flow:** Start OpenLANE in interactive mode to run step-by-step and load dependencies .
+```
 ./flow.tcl -interactive
 package require openlane 1.0.2
+```
+**3. Design Preparation:** Initialize the PicoRV32a core. This parses config.tcl, merges LEF files, and creates a timestamped run directory
+
+```
 prep -design picorv32a
 ```
    
