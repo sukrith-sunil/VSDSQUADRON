@@ -165,8 +165,14 @@ then inside MAGIC
 lef read ../../tmp/merged.nom.lef
 def read ./def/picorv32a.def
 ```
-
+<img  alt="cts" src="https://github.com/sukrith-sunil/VSDSQUADRON/blob/main/p16_magic.png" /> 
 
 **Reports :**
 
+<img  alt="cts" src="https://github.com/sukrith-sunil/VSDSQUADRON/blob/main/p12_pwr.png" /> 
 
+<img  alt="cts" src="https://github.com/sukrith-sunil/VSDSQUADRON/blob/main/p13_pdn.png" /> 
+
+<img  alt="cts" src="https://github.com/sukrith-sunil/VSDSQUADRON/blob/main/p14_picorvmagic.png" /> 
+
+<img  alt="cts" src="https://github.com/sukrith-sunil/VSDSQUADRON/blob/main/p15_picorvmagic.png" /> 
